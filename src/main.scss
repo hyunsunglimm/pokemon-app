@@ -9,6 +9,7 @@ html {
 body {
   color: var(--color-white);
   background-color: var(--color-background);
+  font-family: 'rubik scribble';
 }
 
 a {
@@ -28,9 +29,10 @@ header {
 
   & .home {
     color: var(--color-white);
+    font-size: 24px;
     transition: 0.5s;
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-area);
     }
   }
 
@@ -93,9 +95,26 @@ header {
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        overflow: hidden;
+        
+        &:hover img {
+          transform: scale(1.4);
+          transition: 0.5s;
+        }
 
         & img {
           width: 180px;
+          transition: 0.5s;
+        }
+
+        & .info {
+          background-color: #415a77;
+          width: 100%;
+          padding: 20px 0;
+          color: var(--color-white);
+          display: flex;
+          justify-content: space-around;
+          z-index: 1;
         }
       }
     }
@@ -124,6 +143,10 @@ header {
   }
 
   & .view-more {
+    background-color: var(--color-area);
+    color: var(--color-white);
+    outline: none;
+    border: none;
     width: 300px;
     margin: 40px auto;
     display: block;

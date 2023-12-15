@@ -14,8 +14,10 @@ export default class PokemonItem extends Component {
     this.el.classList.add("pokemon");
     this.el.innerHTML = /* html */ `
       <img src=${pokemon.image}></img>
-      <div>${pokemon.name}</div>
-      <div>no. ${pokemon.id}</div>
+      <div class="info">
+        <div>no. ${pokemon.id}</div>
+        <div>${pokemon.name}</div>
+      </div>
     `;
   }
 }
