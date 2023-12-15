@@ -10,7 +10,7 @@ export default class PokemonItem extends Component {
   render() {
     const { pokemon } = this.props;
 
-    this.el.setAttribute("href", `/pokemon/${pokemon.id}`);
+    this.el.setAttribute("href", `/pokemon?id=${pokemon.id}`);
     this.el.classList.add("pokemon");
     this.el.innerHTML = /* html */ `
       <img src=${pokemon.image}></img>

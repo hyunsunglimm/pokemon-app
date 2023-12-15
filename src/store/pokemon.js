@@ -32,6 +32,7 @@ getPokemons();
 
 export const getAllPokemons = async (count) => {
   store.state.loading = true;
+  store.state.count = count;
 
   try {
     const res = await fetch(
@@ -75,5 +76,17 @@ export const getSearchPokemon = async (idOrName) => {
     store.state.allPokemons = [];
   } finally {
     store.state.loading = false;
+  }
+};
+
+export const getPokemonDetails = async (id) => {
+  try {
+    const res1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const res2 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
+    const json1 = await res1.json();
+    const json2 = await res2.json();
+    store.state.pokemon = { ...json1, ...json2 };
+  } catch (error) {
+    console.log(error);
   }
 };

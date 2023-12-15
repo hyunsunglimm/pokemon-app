@@ -10,7 +10,7 @@ export default class Search extends Component {
     this.el.classList.add("search");
     this.el.innerHTML = /* html */ `
       <input value="${pokemonStore.state.message}" placeholder="Search Pokemon !" />
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" />
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png" />
     `;
 
     const inputEl = this.el.querySelector("input");

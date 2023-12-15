@@ -2,6 +2,7 @@ import { Component } from "../core/core";
 import Search from "../components/Search";
 import PokemonList from "../components/PokemonList";
 import PokemonListMore from "../components/PokemonListMore";
+import pokemonStore from "../store/pokemon";
 
 export default class Home extends Component {
   render() {

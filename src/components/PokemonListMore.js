@@ -6,14 +6,19 @@ export default class PokemonListMore extends Component {
     super({
       tagName: "button",
     });
+    // pokemonStore.subscribe("allPokemons", () => {
+    //   this.render();
+    // });
   }
 
   render() {
     this.el.textContent = "View more...";
+    // pokemonStore.state.allPokemons.length === 1
+    //   ? this.el.classList.add("hide")
+    //   : this.el.classList.remove("hide");
     this.el.classList.add("view-more");
     this.el.addEventListener("click", async () => {
-      pokemonStore.state.count += 20;
-      await getAllPokemons(pokemonStore.state.count);
+      await getAllPokemons(pokemonStore.state.count + 20);
     });
   }
 }

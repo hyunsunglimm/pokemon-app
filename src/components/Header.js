@@ -8,7 +8,7 @@ export default class Header extends Component {
   }
   render() {
     this.el.innerHTML = /* html */ `
-      <a href="/" class="home">HOME</a>
+      <a href="/" class="home">POKEMON APP</a>
       <a href="/about" class="about">
         <img src="https://velog.velcdn.com/images/gustjd3834/profile/4b318994-bf6a-4a9d-be2e-b31ea52ddfb2/image.png" alt="User" />
       </a>
