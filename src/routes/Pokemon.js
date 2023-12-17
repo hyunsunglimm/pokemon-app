@@ -26,22 +26,35 @@ export default class Pokemon extends Component {
     this.el.classList.add("container", "the-pokemon");
     this.el.innerHTML = /* html */ `
     <div class="images">
-      <div>
-        <p>앞</p>
-        <img src="${images.front_default}" />
+
+      <div class="normal">
+        <p>normal</p>
+        <div>
+          <div>
+            <img src="${images.front_default}" />
+            <p>front</p>
+          </div>
+          <div>
+            <img src="${images.back_default}" />
+            <p>back</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>뒤</p>
-        <img src="${images.back_default}" />
+      
+      <div class="unique">
+        <p>unique</p>
+        <div>
+          <div>
+            <img src="${images.front_shiny}" />
+            <p>front</p>
+          </div>
+          <div>
+            <img src="${images.back_shiny}" />
+            <p>back</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>앞 (돌연변이)</p>
-        <img src="${images.front_shiny}" />
-      </div>
-      <div>
-        <p>뒤 (돌연변이)</p>
-        <img src="${images.back_shiny}" />
-      </div>
+
     </div>
 
     <div class="status">
